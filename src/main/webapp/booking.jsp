@@ -48,7 +48,9 @@
             if (s.isGratis()==true){
                 out.println("JA");
             }%></td> <%--if false remove? --%>
-        <td><%=s.isTilgjengelig()%></td>
+        <td><% if (s.isTilgjengelig()==true){
+            out.println("JA");}%></td>
+        }
     </tr>
 
 </table>

@@ -49,7 +49,9 @@ public class RegistrerBooking extends HttpServlet {
 
 
             ps.execute();
-            out.println("Ny booking registrert!");
+           // out.println("Ny booking registrert!");
+
+            res.sendRedirect("ordrebekreftelse.jsp");
 
 
         } catch (SQLException throwables) {

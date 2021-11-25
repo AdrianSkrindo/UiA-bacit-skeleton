@@ -1,0 +1,25 @@
+header {
+    text-align: center;
+}
+body {
+
+
+    background-color: #f0b324;
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #151E4A;
+    text-transform: uppercase;
+    font-size: 32px;
+    padding: 50px;
+}
+
+h2 {
+    text-align: center;
+    color: #151E4A;
+    text-transform: uppercase;
+    font-size: 20px;
+}
