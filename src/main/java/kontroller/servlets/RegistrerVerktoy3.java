@@ -28,13 +28,15 @@ public class RegistrerVerktoy3 extends HttpServlet {
         PreparedStatement ps;
         Connection con;
 
-        //Her henter vi dataene fra rutene til logg inn siden
+        //H
         String Gratis = (req.getParameter("Gratis")).toLowerCase();
         System.out.println(Gratis);
         String Kostnad = req.getParameter("Kostnad");
         System.out.println(Kostnad);
         String VerktoyID = req.getParameter("VtID");
         System.out.println(VerktoyID);
+
+        //string her må matche setString under.
 
         int Maksdager = 4;
 
@@ -55,7 +57,7 @@ public class RegistrerVerktoy3 extends HttpServlet {
             ps.execute();
             res.sendRedirect("hjem.jsp");
 
-
+// STACKTRACE, skriver ut feilmelding ved error
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }

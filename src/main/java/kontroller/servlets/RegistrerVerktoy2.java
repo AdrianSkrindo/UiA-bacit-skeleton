@@ -68,6 +68,8 @@ public class RegistrerVerktoy2 extends HttpServlet {
 
                request.setAttribute("VtID", VtID);
                request.getRequestDispatcher("registrerVerktoy3.jsp").forward(request, response);
+               //bruker forward og getRequestDispatcher til å gå videre til en ny ressurs
+                //html, java servlet eller jsp fil
 
 
 
