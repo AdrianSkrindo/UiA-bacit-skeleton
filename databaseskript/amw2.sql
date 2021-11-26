@@ -7,7 +7,7 @@ INSERT INTO `verktoytype` VALUES (29,'Skap henger',_binary '‰PNG\r\n\Z\n\0\0\0
 #Verktøy
 insert into Verktoy (VerktoyID, VerktoyTypeID, Tilgjenglighet, MaksDager, Gratis, Kostnad)
 VALUES (1, 1, TRUE, 4, TRUE, 20),
-       (2, 2, TRUE, 4, TRUE, 20);
+       (2, 2, TRUE, 4, TRUE, 20),
         (3, 3, TRUE, 4, TRUE, 20),
         (4, 4, TRUE, 4, TRUE, 20),
         (5, 5, TRUE, 4, TRUE, 20),
@@ -37,16 +37,3 @@ VALUES (1, 1, TRUE, 4, TRUE, 20),
         (29, 29, TRUE, 4, TRUE, 50),
         (30, 30, TRUE, 4, TRUE, 20);
 
-
-#Booking
-
-insert into Booking (VerktoyID, AnsattID, BookingDatoStartID, BookingDatoSlutt, Status) values
-    (1, 1, '01.01.2021', '04.01.2021', 0);
-
-insert into Booking (VerktoyID, AnsattID, BookingDatoStartID, BookingDatoSlutt, Status)
-VALUES (2, 1, '01.08.2021', '04.08.2021', 1);
-
-SELECT VerktoyType.VerktoyTypeID, VerktoyTypeNavn,VerktoyID, Verktoy.Tilgjenglighet
-from VerktoyType
-         inner join Verktoy ON Verktoy.VerktoyTypeID = VerktoyType.VerktoyTypeID = Verktoy.VerktoyTypeID
-where Verktoy.Tilgjenglighet = true;

@@ -20,11 +20,11 @@
 <table border ="1" width="1000" align="center">
     <tr bgcolor="#021e46">
         <th><b>VerktøyID</b></th>
-        <th><b>BILDEPATH INN HER</b></th>
+        <th><b></b></th>
         <th><b>Navn på verktøyet</b></th>
         <th><b>Kroner pr døgn</b></th>
         <th><b>Maks antall dager</b></th>
-        <th><b>Gratis å låne første dag</b></th>
+        <th><b>Gratis første døgn</b></th>
         <th><b>Ledig</b></th>
 
     </tr>
