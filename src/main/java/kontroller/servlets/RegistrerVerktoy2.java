@@ -25,20 +25,27 @@ import java.util.logging.Logger;
 
 
 @WebServlet("/RegistrerVerktoy2")
+//konfigurert max fil størrelse
 @MultipartConfig(maxFileSize = 1024 * 1024 * 2)
 public class RegistrerVerktoy2 extends HttpServlet {
 
-
-
+//forward til registrerVerktoy3 ligger neste registrerVerktoy3 servlet, på samme vis som denne.
+//doGet for å navigere oss til registrerVerktoy2.jsp. doGet fordi vi ønsker å hente noe, og ikke lage noe.
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         request.getRequestDispatcher("registrerVerktoy2.jsp").forward(request, response);
     }
+
+    //doPost, fordi vi ønsker å gi applikasjonen (her databasen) noe informasjon.
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html");
+        //setContentType forteller hva HTML applikasjonen innholder og skal tolke
         PrintWriter out = response.getWriter();
+        //returnerer et PrintWriter object som kan sende text til klienten
         InputStream image = null;
+        //inputStream er en klasse som snakker med applikasjonen, inputStream for å laste ned/inn i applikasjonen
+        //outputStram for å laste opp
 
         PreparedStatement ps;
         Connection con;
