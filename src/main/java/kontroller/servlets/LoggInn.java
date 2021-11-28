@@ -52,6 +52,9 @@ public class LoggInn extends HttpServlet {
         }
     }
 
+
+    //sjekke admin
+
     public static boolean validateAdmin(HttpSession session) {
         Connection db;
         PreparedStatement ps;

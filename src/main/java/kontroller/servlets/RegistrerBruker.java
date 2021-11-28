@@ -39,6 +39,7 @@ public class RegistrerBruker extends HttpServlet {
         BrukerDB bdb = null;
         try {
             //Her initierer vi samme tomme tabell og setter den opp med en kobling til databasen
+            //VIKTIG AT ps.setString matcher Stringen oven.
             con = DBUtils.getINSTANCE().getConnection(out);
             String query = "INSERT INTO Ansatt (AnsattFornavn, AnsattEtternavn, AnsattEmail, AnsattTlf, Passord) values (?,?,?,?,?)";
             ps = con.prepareStatement(query);

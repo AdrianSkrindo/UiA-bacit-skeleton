@@ -50,7 +50,7 @@
             }%></td> <%--if false remove? --%>
         <td><% if (s.isTilgjengelig()==true){
             out.println("JA");}%></td>
-        }
+
     </tr>
 
 </table>
