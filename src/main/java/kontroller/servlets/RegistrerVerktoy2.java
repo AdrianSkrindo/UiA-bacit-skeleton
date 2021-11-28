@@ -53,6 +53,8 @@ public class RegistrerVerktoy2 extends HttpServlet {
 
         if (filePart != null) {
             image = filePart.getInputStream();
+
+            //klasse (inputstream) som lar oss hente data inni applikasjonen
         }
 
         try{

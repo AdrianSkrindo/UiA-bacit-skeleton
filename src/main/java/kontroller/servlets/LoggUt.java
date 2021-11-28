@@ -20,6 +20,8 @@ public class LoggUt extends HttpServlet {
 
         HttpSession session = req.getSession();
         session.removeAttribute("logUser");
+        //removeAttribute isteden for setAttribute, fordi vi ønsker å avslutte og ikke starte en session
         res.sendRedirect("index.jsp");
+        //Redirectert til logg inn siden/index.jsp
     }
 }
